@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "75879668080",
+    "project_id": "task-tender",
+    "storage_bucket": "task-tender.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:75879668080:android:7db9811a32f7aee04f57b5",
+        "android_client_info": {
+          "package_name": "com.example.task_tender"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPCZv99qxXr4_JV7T4Ib8H5rwkf5-ZWLU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
