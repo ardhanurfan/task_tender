@@ -10,6 +10,26 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     TextEditingController findController = TextEditingController();
 
+    Widget categories() {
+      return SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          children: [
+            Container(
+              height: 160,
+              width: 120,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                image: DecorationImage(
+                    image: AssetImage('assets/kamar.jpg'), fit: BoxFit.fill),
+                color: blackColor,
+              ),
+            )
+          ],
+        ),
+      );
+    }
+
     Widget body() {
       return ListView(
         padding: EdgeInsets.only(
@@ -49,6 +69,7 @@ class HomePage extends StatelessWidget {
           Container(
             margin: const EdgeInsets.only(
               top: 24,
+              bottom: 24,
             ),
             padding: EdgeInsets.all(paddingHorizontal),
             width: double.infinity,
@@ -95,6 +116,15 @@ class HomePage extends StatelessWidget {
               ],
             ),
           ),
+          Text(
+            'Explore Helper',
+            style: blackText.copyWith(
+              fontWeight: bold,
+              fontSize: 14,
+            ),
+          ),
+          const SizedBox(height: 16),
+          categories(),
         ],
       );
     }
