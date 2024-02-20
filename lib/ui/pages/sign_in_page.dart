@@ -82,7 +82,7 @@ class _SignInPageState extends State<SignInPage> {
                   buttonText: "Log In",
                   onPressed: () {
                     Navigator.pushNamedAndRemoveUntil(
-                        context, '/start', (route) => false);
+                        context, '/main', (route) => false);
                   },
                   textStyle: whiteText,
                 ),

@@ -10,6 +10,7 @@ class CustomFormField extends StatefulWidget {
     required this.label,
     required this.validator,
     this.isPassword = false,
+    this.prefixIcon,
   });
 
   final TextEditingController textController;
@@ -17,6 +18,7 @@ class CustomFormField extends StatefulWidget {
   final String label;
   final String validator;
   final bool isPassword;
+  final Widget? prefixIcon;
 
   @override
   State<CustomFormField> createState() => _CustomFormFieldState();
@@ -74,6 +76,7 @@ class _CustomFormFieldState extends State<CustomFormField> {
             ),
           ),
         ),
+        prefixIcon: widget.prefixIcon,
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(4),
           borderSide: BorderSide(

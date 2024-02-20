@@ -11,6 +11,7 @@ Color darkGrey = const Color(0xFF616161);
 Color lightGrey = const Color(0xFF808080);
 Color backgroundColor = const Color(0xFFF7F7F7);
 Color whiteColor = Colors.white;
+Color blackColor = const Color(0xFF494761);
 
 TextStyle primaryText = GoogleFonts.poppins(color: primaryColor);
 TextStyle secondaryText = GoogleFonts.poppins(color: secondaryColor);
@@ -20,7 +21,8 @@ TextStyle yellowText = GoogleFonts.poppins(color: yellowColor);
 TextStyle toscaText = GoogleFonts.poppins(color: toscaColor);
 TextStyle darkGreyText = GoogleFonts.poppins(color: darkGrey);
 TextStyle lightGreyText = GoogleFonts.poppins(color: lightGrey);
-TextStyle whiteText = GoogleFonts.poppins(color: Colors.white);
+TextStyle whiteText = GoogleFonts.poppins(color: whiteColor);
+TextStyle blackText = GoogleFonts.poppins(color: blackColor);
 
 FontWeight light = FontWeight.w300;
 FontWeight regular = FontWeight.w400;

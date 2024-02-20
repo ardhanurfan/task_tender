@@ -18,10 +18,8 @@ class MainPage extends StatelessWidget {
       return Align(
         alignment: Alignment.bottomCenter,
         child: Container(
-          height: 60,
+          height: 68,
           width: double.infinity,
-          margin: EdgeInsets.only(
-              bottom: 30, right: defaultMargin, left: defaultMargin),
           decoration: BoxDecoration(
               color: whiteColor,
               borderRadius: BorderRadius.circular(defaultRadius),
@@ -39,10 +37,26 @@ class MainPage extends StatelessWidget {
           child: const Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              NavigationItem(index: 0, icon: Icons.home_rounded),
-              NavigationItem(index: 1, icon: Icons.qr_code),
-              NavigationItem(index: 2, icon: Icons.article),
-              NavigationItem(index: 3, icon: Icons.settings_rounded),
+              NavigationItem(
+                index: 0,
+                icon: Icons.home_outlined,
+                text: 'Home',
+              ),
+              NavigationItem(
+                index: 1,
+                icon: Icons.search_rounded,
+                text: 'Find Talent',
+              ),
+              NavigationItem(
+                index: 2,
+                icon: Icons.mail_outline_rounded,
+                text: 'Chat',
+              ),
+              NavigationItem(
+                index: 3,
+                icon: Icons.calendar_today_outlined,
+                text: 'Assign Task',
+              ),
             ],
           ),
         ),

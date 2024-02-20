@@ -1,5 +1,9 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:task_tender/providers/page_provider.dart';
+import 'package:task_tender/providers/user_provider.dart';
+import 'package:task_tender/ui/pages/main_page.dart';
 
 import 'firebase_options.dart';
 import 'shared/theme.dart';
@@ -22,17 +26,24 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-          useMaterial3: true,
-          primaryColor: primaryColor,
-          colorScheme: ColorScheme.fromSeed(seedColor: primaryColor)),
-      routes: {
-        '/': (context) => const SplashPage(),
-        '/sign-in': (context) => const SignInPage(),
-        '/sign-up': (context) => const SignUpPage(),
-      },
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => UserProvider()),
+        ChangeNotifierProvider(create: (context) => PageProvider()),
+      ],
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+            useMaterial3: true,
+            primaryColor: primaryColor,
+            colorScheme: ColorScheme.fromSeed(seedColor: primaryColor)),
+        routes: {
+          '/': (context) => const SplashPage(),
+          '/sign-in': (context) => const SignInPage(),
+          '/sign-up': (context) => const SignUpPage(),
+          '/main': (context) => const MainPage(),
+        },
+      ),
     );
   }
 }
