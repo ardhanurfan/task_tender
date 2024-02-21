@@ -5,13 +5,14 @@ Color primaryColor = const Color(0xFF569FED);
 Color secondaryColor = const Color(0xFF33BDFE).withOpacity(0.2);
 Color greenColor = const Color(0xFF4CAF50);
 Color redColor = const Color(0xFF9E2033);
-Color yellowColor = const Color(0xFFE48320);
+Color yellowColor = const Color(0xFFF3B33E);
 Color toscaColor = const Color(0xFF00DDC2);
 Color darkGrey = const Color(0xFF616161);
 Color lightGrey = const Color(0xFF808080);
 Color backgroundColor = const Color(0xFFF7F7F7);
 Color whiteColor = Colors.white;
 Color blackColor = const Color(0xFF494761);
+Color purpleColor = const Color(0xFF7472E0);
 
 TextStyle primaryText = GoogleFonts.poppins(color: primaryColor);
 TextStyle secondaryText = GoogleFonts.poppins(color: secondaryColor);
