@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:task_tender/providers/page_provider.dart';
 import 'package:task_tender/providers/user_provider.dart';
+import 'package:task_tender/ui/pages/detail_talent_page.dart';
 import 'package:task_tender/ui/pages/main_page.dart';
 
 import 'firebase_options.dart';
@@ -42,6 +43,7 @@ class MyApp extends StatelessWidget {
           '/sign-in': (context) => const SignInPage(),
           '/sign-up': (context) => const SignUpPage(),
           '/main': (context) => const MainPage(),
+          '/detail-talent': (context) => const DetailTalent(),
         },
       ),
     );
