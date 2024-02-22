@@ -20,7 +20,10 @@ class Header extends StatelessWidget {
           bottomRight: Radius.circular(12),
         ),
       ),
-      child: child,
+      child: Padding(
+        padding: const EdgeInsets.only(top: 52),
+        child: Center(child: child),
+      ),
     );
   }
 }
