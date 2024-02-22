@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:task_tender/providers/page_provider.dart';
 import 'package:task_tender/shared/theme.dart';
+import 'package:task_tender/ui/pages/contract_page.dart';
 import 'package:task_tender/ui/pages/detail_assign_page.dart';
 import 'package:task_tender/ui/pages/detail_talent_page.dart';
 import 'package:task_tender/ui/widgets/navigation_item.dart';
@@ -73,7 +74,7 @@ class MainPage extends StatelessWidget {
           }
         case 1:
           {
-            return const DetailAssign();
+            return const Contract();
           }
         default:
           {
