@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task_tender/shared/theme.dart';
-import 'package:task_tender/ui/widgets/assign_task_card.dart';
+import 'package:task_tender/ui/widgets/chat_card.dart';
 import 'package:task_tender/ui/widgets/custom_form_field.dart';
 import 'package:task_tender/ui/widgets/header.dart';
 
@@ -9,14 +9,14 @@ class ChatPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    TextEditingController findController = TextEditingController();
+    TextEditingController searchController = TextEditingController();
 
     Widget chats() {
       return const Column(
         children: [
-          AssignTaskCard(),
-          AssignTaskCard(),
-          AssignTaskCard(),
+          ChatCard(),
+          ChatCard(),
+          ChatCard(),
         ],
       );
     }
@@ -36,9 +36,9 @@ class ChatPage extends StatelessWidget {
               color: primaryColor,
             ),
             hintText: 'Input your talent name',
-            label: 'Find Talent',
-            validator: 'Please input your email',
-            textController: findController,
+            label: 'Search message',
+            validator: '',
+            textController: searchController,
           ),
           const SizedBox(height: 24),
           chats(),
