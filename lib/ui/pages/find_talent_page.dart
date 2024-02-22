@@ -1,40 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:task_tender/shared/theme.dart';
-import 'package:task_tender/ui/widgets/assign_task_card.dart';
-import 'package:task_tender/ui/widgets/category_card.dart';
 import 'package:task_tender/ui/widgets/custom_form_field.dart';
 import 'package:task_tender/ui/widgets/header.dart';
+import 'package:task_tender/ui/widgets/showing_result_card.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class FindTalentPage extends StatelessWidget {
+  const FindTalentPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     TextEditingController findController = TextEditingController();
 
-    Widget categories() {
-      return const SingleChildScrollView(
-        scrollDirection: Axis.horizontal,
-        child: Row(
-          children: [
-            CategoryCard(),
-            CategoryCard(),
-            CategoryCard(),
-            CategoryCard(),
-            CategoryCard(),
-          ],
-        ),
-      );
-    }
-
-    Widget assignTask() {
+    Widget showResult() {
       return const Column(
         children: [
-          AssignTaskCard(),
-          AssignTaskCard(),
-          AssignTaskCard(),
-          AssignTaskCard(),
-          AssignTaskCard(),
+          ShowingResultCard(),
+          ShowingResultCard(),
+          ShowingResultCard(),
         ],
       );
     }
@@ -42,42 +24,22 @@ class HomePage extends StatelessWidget {
     Widget body() {
       return ListView(
         padding: EdgeInsets.only(
-          top: 80,
-          left: paddingHorizontal,
-          right: paddingHorizontal,
-          bottom: 20,
-        ),
+            top: 100,
+            left: paddingHorizontal,
+            right: paddingHorizontal,
+            bottom: 20),
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Row(
-                children: [
-                  Text(
-                    "Hi, ",
-                    style: whiteText.copyWith(
-                      fontSize: 30,
-                    ),
-                  ),
-                  Text(
-                    "Tutung",
-                    style: whiteText.copyWith(
-                      fontSize: 30,
-                      fontWeight: bold,
-                    ),
-                  ),
-                ],
-              ),
-              Icon(
-                Icons.account_circle_outlined,
-                size: 36,
-                color: whiteColor,
-              ),
-            ],
+          Text(
+            "Search Details",
+            style: whiteText.copyWith(
+              fontSize: 16,
+              fontWeight: bold,
+            ),
+            textAlign: TextAlign.center,
           ),
           Container(
             margin: const EdgeInsets.only(
-              top: 24,
+              top: 32,
               bottom: 24,
             ),
             padding: EdgeInsets.all(paddingHorizontal),
@@ -96,17 +58,10 @@ class HomePage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Need a New Assistant?",
+                  "Search for Helper",
                   style: blackText.copyWith(
-                    fontSize: 20,
+                    fontSize: 16,
                     fontWeight: bold,
-                  ),
-                ),
-                Text(
-                  "Search and acquire today",
-                  style: blackText.copyWith(
-                    fontSize: 12,
-                    fontWeight: regular,
                   ),
                 ),
                 const SizedBox(
@@ -126,30 +81,34 @@ class HomePage extends StatelessWidget {
             ),
           ),
           Text(
-            'Explore Helper',
+            'Showing Result',
             style: blackText.copyWith(
               fontWeight: bold,
               fontSize: 14,
             ),
           ),
           const SizedBox(height: 16),
-          categories(),
-          const SizedBox(height: 24),
-          Text(
-            'Assign Task',
-            style: blackText.copyWith(
-              fontWeight: bold,
-              fontSize: 14,
-            ),
-          ),
-          const SizedBox(height: 16),
-          assignTask(),
+          showResult(),
         ],
       );
     }
 
     return Scaffold(
       backgroundColor: backgroundColor,
+      floatingActionButton: Container(
+        margin: const EdgeInsets.only(top: 20),
+        child: FloatingActionButton(
+          onPressed: () {},
+          backgroundColor: whiteColor,
+          shape: const CircleBorder(),
+          elevation: 1,
+          child: Icon(
+            Icons.volume_up,
+            color: yellowColor,
+          ),
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endTop,
       body: Stack(
         children: [
           const Header(
